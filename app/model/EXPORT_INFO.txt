@@ -1,0 +1,45 @@
+GEOCHANGE-AI — MODEL EXPORT INFORMATION
+======================================
+
+Framework versions
+------------------
+TensorFlow: 2.21.0
+Keras: 3.13.2
+Python: 3.13.16
+
+Model
+-----
+Run name: bcedice_v1
+Selected model: BCE+Dice
+Best epoch: 27
+Architecture: Siamese U-Net with shared MobileNetV2 encoder
+Input size: 256 x 256
+Output size: 256 x 256 x 1
+Parameters: 8058977
+
+Frozen application settings
+---------------------------
+Threshold: 0.3
+Minimum connected-component area: 50 pixels
+
+Training configuration
+----------------------
+Batch normalization momentum: 0.99
+Mixed precision: Disabled
+
+Export
+------
+Weights file: geochange_v1.weights.h5
+Settings file: settings.json
+Original model: experiments/runs/bcedice_v1/best_model.keras
+
+Verification
+------------
+Verification split: VAL
+Number of validation pairs: 8
+Maximum absolute prediction difference: 0.000000000000
+Required maximum difference: < 1e-05
+
+Result: PASS
+No training was performed during export.
+No TEST evaluation was performed during export.

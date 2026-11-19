@@ -1,0 +1,5 @@
+{
+    "model_name": "GeoChange-AI BCE+Dice",
+    "threshold": 0.3,
+    "min_area": 50
+}

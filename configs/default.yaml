@@ -1,0 +1,31 @@
+# GeoChange-AI — Step 5b configuration
+
+paths:
+  train_parquet: data/raw/data/train-*.parquet
+  val_parquet: data/raw/data/val-*.parquet
+  test_parquet: data/raw/data/test-*.parquet
+  train_manifest: data/processed/train_manifest.csv
+
+batch_size: 16
+seed: 42
+img_size: 256
+
+freeze_encoder: false
+decoder_filters: [256, 128, 64, 32]
+use_mixed_precision: false
+
+# Applied to every BatchNormalization layer
+# in both the encoder and decoder.
+bn_momentum: 0.99
+
+training:
+  learning_rate: 0.0003
+  loss: bce_dice
+
+  max_epochs: 30
+  time_budget_minutes: 80
+
+  reduce_lr_factor: 0.5
+  reduce_lr_patience: 3
+
+  early_stopping_patience: 8

@@ -1,0 +1,10 @@
+tensorflow==2.21.0
+keras==3.12.4
+numpy
+pandas
+matplotlib
+opencv-python
+Pillow
+streamlit
+pyarrow
+scikit-learn
